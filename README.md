@@ -188,7 +188,22 @@ See [Authentication](#authentication) below.
         <code>baseUrl</code>
       </th>
       <td>
-        <code>String</code>
+        <code>String</code>import { Octokit } from "octokit";
+
+const octokit = new Octokit({ });
+
+const data = await octokit.paginate("GET /repos/{owner}/{repo}/issues", {
+  owner: "octocat",
+  repo: "Spoon-Knife",
+  per_page: 100,
+  headers: {
+    "X-GitHub-Api-Version": "2022-11-28",
+  },
+});
+
+console.log(data)
+
+
       </td>
       <td>
 
@@ -231,10 +246,27 @@ Advanced options
       </td>
       <td>
 
-- `request.signal`: Use an [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) instance to cancel a request. [`abort-controller`](https://www.npmjs.com/package/abort-controller) is an implementation for Node.
-- `request.fetch`: Replacement for [built-in fetch method](<https://nodejs.org/en/blog/announcements/v18-release-announce#fetch-(experimental)>).
+- `request.signal`: Use an [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)https://youtrack.jetbrains.com/api/files/74-794068?sign=MTcyODk1MDQwMDAwMHwxMS0xfDc0LTc5NDA2OHxhNG5FaGhFa3VsN3dubml0cVVveWtDX1BLXzRfeElGV1dLcGRpV3pjYUM0DQo&updated=1580678639567 instance to cancel a request. [`abort-controller`](https://www.npmjs.com/package/abort-controllehttps://youtrack.jetbrains.com/api/files/74-794068?sign=MTcyODk1MDQwMDAwMHwxMS0xfDc0LTc5NDA2OHxhNG5FaGhFa3VsN3dubml0cVVveWtDX1BLXzRfeElGV1dLcGRpV3pjYUM0DQo&updated=1580678639567
+- r) is an implementation for Node.
+- `request.fetch`: Replacement for [built-in fetch method]import { Octokit } from "octokit";
+
+const octokit = new Octokit({ });
+
+const data = await octokit.paginate("GET /repos/{owner}/{repo}/issues", {
+  owner: "octocat",
+  repo: "Spoon-Knife",
+  per_page: 100,
+  headers: {
+    "X-GitHub-Api-Version": "2022-11-28",
+  },
+});
+
+console.log(data)
+
+
 
 Node only
+
 
 - `request.timeout` sets a request timeout, defaults to 0
 
